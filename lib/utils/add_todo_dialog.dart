@@ -32,7 +32,7 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.grey[400],
+      backgroundColor: Colors.grey[200],
       title: const Text('Add Task'),
       content: SizedBox(
         height: 150,

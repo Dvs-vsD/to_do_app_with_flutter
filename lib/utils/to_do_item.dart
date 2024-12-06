@@ -28,7 +28,8 @@ class TodoItem extends StatelessWidget {
             SlidableAction(
               onPressed: onDeleteTask,
               icon: Icons.delete,
-              backgroundColor: Colors.red,borderRadius: BorderRadius.circular(16),
+              backgroundColor: Colors.red,
+              borderRadius: BorderRadius.circular(16),
             ),
           ],
         ),
@@ -41,12 +42,17 @@ class TodoItem extends StatelessWidget {
                 onChanged: onChanged,
                 activeColor: Colors.black,
               ),
-              Text(
-                todoName,
-                style: TextStyle(fontSize: 18,
-                    decoration: isChecked
-                        ? TextDecoration.lineThrough
-                        : TextDecoration.none),
+              Flexible(
+                child: Text(
+                  todoName,
+                  style: TextStyle(
+                      fontSize: 18,
+                      decoration: isChecked
+                          ? TextDecoration.lineThrough
+                          : TextDecoration.none),
+                  softWrap: true,
+                  overflow: TextOverflow.visible,
+                ),
               )
             ],
           ),
